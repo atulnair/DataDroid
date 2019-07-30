@@ -13,8 +13,14 @@ def main():
     apkLoc = args.apk
     ApkTool(apkLoc,"/anidiot")
     Dex2Jar(apkLoc)
+
+    features()
     print(apkLoc)
 
-
+def features():
+    while True:
+        print("DataDroid >> ",end="")
+        op = str(input())
+        print(op)
 if __name__ == "__main__":
     main()

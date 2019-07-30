@@ -9,5 +9,6 @@ class ApkTool:
         self.execute()
 
     def execute(self):
-        command = "java -jar " + ApkTool.APKTOOL_PATH + " d " + self.input_filepath + " -f -o .temp2" 
-        print(os.system(command))
+        command = "java -jar " + ApkTool.APKTOOL_PATH + " d " + self.input_filepath + " -f -o .temp2 > /dev/null 2>&1"
+        print("Extracting res and Manifest")
+        os.system(command)
